@@ -2,14 +2,14 @@ package com.clinic.queue;
 
 public class QueueEntry{
 
-    private Patient patient;
+    private PatientBase patient;
     private int queueNumber;
 
-    public QueueEntry(Patient patient, int queueNumber){
+    public QueueEntry(PatientBase patient, int queueNumber){
         this.patient = patient;
         this.queueNumber = queueNumber;
     }
-    public Patient getPatient() {
+    public PatientBase getPatient() {
         return patient;
     }
     public int getQueueNumber() {
