@@ -1,25 +1,55 @@
 package com.clinic.queue;
 
-public class Main {
+import java.util.Scanner;
+
+public class main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         ClinicQueue clinic = new ClinicQueue();
         Receptionist receptionist = new Receptionist("Alice");
+          boolean exit = false;
+             while (!exit) {
+            System.out.println("\n--- Clinic Queue Management ---");
+            System.out.println("1. Register a new patient");
+            System.out.println("2. View all patients");
+            System.out.println("3. Serve next patient");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
 
-        receptionist.registerPatient("P001", "John Doe", 30, "Flu", clinic);
-        receptionist.registerPatient("P002", "Jane Smith", 25, "Emergency", clinic);
-        receptionist.registerPatient("P003", "Mike Johnson", 40, "Check-up", clinic);
-        receptionist.registerPatient("P004", "Emily Davis", 20, "Emergency", clinic);
-        
-         System.out.println("Current queue:");
-         clinic.viewPatients();
+            int choice = scanner.nextInt();
+            sc.nextLine();
 
-        
-        System.out.println("\nServing patients:");
-        clinic.servePatient();
-        clinic.servePatient();
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter patient ID: ");
+                    String id = sc.nextLine();
+                    System.out.print("Enter patient name: ");
+                    String name = sc.nextLine();
+                    System.out.print("Enter patient age: ");
+                    int age = sc.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Enter condition (e.g., Emergency, Flu): ");
+                    String condition = sc.nextLine();
 
-      
-        System.out.println("\nRemaining queue:");
-        clinic.viewPatients();
+                    receptionist.registerPatient(id, name, age, condition, clinic);
+                    System.out.println("Patient registered successfully.");
+                    break;
+                case 2:
+                    System.out.println("\nCurrent queue:");
+                    clinic.viewPatients();
+                    break;
+                case 3:
+                    clinic.servePatient();
+                    break;
+                case 4:
+                    exit = true;
+                    System.out.println("Exiting program. Goodbye!");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+
+        sc.close();
     }
 }
