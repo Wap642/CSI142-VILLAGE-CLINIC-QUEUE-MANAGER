@@ -4,11 +4,13 @@ public class Patient extends Person{
 
 private String id;
 private String condition;
+private MedicalVitals vitals;
 
-public Patient(String id, String name, int age, String condition) {
+public Patient(String id, String name, int age, String condition, MedicalVitals vitals) {
     super(name, age);
     this.id = id;
     this.condition = condition;
+    this.vitals = vitals;
 }
   public String getName(){
     return name;
