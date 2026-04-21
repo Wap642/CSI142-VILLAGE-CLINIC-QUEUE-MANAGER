@@ -1,17 +1,14 @@
 package com.clinic.queue;
 
-public class Patient{
+public class Patient extends Person{
 
-private String name;
 private String id;
-private int age;
 private String condition;
 
-public Patient(String name,String id,int age,String condition){
-    this.name=name;
-    this.id=id;
-    this.age =age;
-    this.condition=condition;
+public Patient(String id, String name, int age, String condition) {
+    super(name, age);
+    this.id = id;
+    this.condition = condition;
 }
   public String getName(){
     return name;
