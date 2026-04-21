@@ -1,6 +1,9 @@
 Class List
-->ClinicQueue.class
--->Patient.class
--->QuenceEntry.class
--->Receptionist.class
--->Main.class
+->ClinicQueue
+-->Patient
+-->QuenceEntry
+-->Receptionist
+-->Main  
+
+
+
