@@ -1,6 +1,8 @@
 package com.clinic.queue;
 
-public class Patient extends Person{
+import com.clinic.Billable;
+
+public class Patient extends Person implements Billable{
 
 private String id;
 private String condition;
@@ -18,7 +20,7 @@ public String getId(){
   public String getName(){
     return name;
   }
-  public String getAge(){
+  public int getAge(){
     return age;
   }
 public String getCondition(){
@@ -37,4 +39,8 @@ public void setVitals(MedicalVitals vitals){
 public String toString(){
     return "ID: " + id +", Name: "+ name + ",Age:  "+ age +" ,Condition: " +condition + ",Vitals: "+vitals;
 }
+@Override
+public double calculateBill() {
+    return 0.0;
+ }
 }
