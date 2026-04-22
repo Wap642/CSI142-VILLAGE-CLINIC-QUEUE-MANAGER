@@ -19,8 +19,7 @@ public class Main {
             System.out.print("Enter your choice: ");
 
             int choice = sc.nextInt();
-            sc.nextLine(); // Consume newline
-
+            sc.nextLine(); 
             switch (choice) {
                 case 1:
                     
@@ -30,7 +29,7 @@ public class Main {
                     String name = sc.nextLine();
                     System.out.print("Enter patient age: ");
                     int age = sc.nextInt();
-                    sc.nextLine(); // Consume newline
+                    sc.nextLine(); 
                     System.out.print("Enter condition (e.g., Emergency, Flu): ");
                     String condition = sc.nextLine();
 

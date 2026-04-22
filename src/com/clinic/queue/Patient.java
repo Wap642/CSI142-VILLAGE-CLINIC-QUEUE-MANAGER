@@ -1,6 +1,6 @@
 package com.clinic.queue;
 
-public class Patient extends Person{
+public class Patient extends Person implements Prioritizable{
 
 private String id;
 private String condition;
@@ -10,15 +10,30 @@ public Patient(String id, String name, int age, String condition, MedicalVitals 
     super(name, age);
     this.id = id;
     this.condition = condition;
-    this.vitals = vitals;
+    this.vitals=vitals;
 }
-  public String getName(){
-    return name;
-  }
+public String getId(){
+  return id;
+}
+
 public String getCondition(){
   return condition;
 }
-public String toString(){
-    return "ID: " + id +", Name: "+ name + ",Age:  "+ age +" ,Condition: " +condition;
+public MedicalVitals getVitals(){
+  return vitals;
 }
+public void setCondition(String condition){
+  this.condition = condition;
+}
+public void setVitals(MedicalVitals vitals){
+  this.vitals = vitals ;
+}
+@Override
+public String toString(){
+    return "ID: " + id +", Name: "+ name + ",Age:  "+ age +" ,Condition: " +condition + ",Vitals: "+vitals;
+}
+@Override
+public int getPriority() {
+    return 3;
+ }
 }
