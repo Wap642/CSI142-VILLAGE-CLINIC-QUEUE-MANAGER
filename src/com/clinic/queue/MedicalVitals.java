@@ -12,6 +12,6 @@ public class MedicalVitals{
     }
     @Override
     public String toString() {
-        return "[Temp: " + temperature + " °C, BP: " + bloodPressure + ", HR: " heartRate + "bpm]";
+        return "[Temp: " + temperature + " °C, BP: " + bloodPressure + ", HR: " + heartRate + "bpm]";
     }
 }

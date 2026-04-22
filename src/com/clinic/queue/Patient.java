@@ -1,6 +1,6 @@
 package com.clinic.queue;
 
-public class Patient extends Person implements Billable{
+public class Patient extends Person implements Prioritizable{
 
 private String id;
 private String condition;
@@ -15,12 +15,7 @@ public Patient(String id, String name, int age, String condition, MedicalVitals 
 public String getId(){
   return id;
 }
-  public String getName(){
-    return name;
-  }
-  public int getAge(){
-    return age;
-  }
+
 public String getCondition(){
   return condition;
 }
@@ -38,7 +33,7 @@ public String toString(){
     return "ID: " + id +", Name: "+ name + ",Age:  "+ age +" ,Condition: " +condition + ",Vitals: "+vitals;
 }
 @Override
-public double calculateBill() {
-    return 0.0;
+public int getPriority() {
+    return 3;
  }
 }
