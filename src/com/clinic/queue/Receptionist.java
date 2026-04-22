@@ -9,7 +9,7 @@ public class Receptionist{
   public String getName(){
     return name ;
   }
-  public setName(String name){
+  public void setName(String name){
     this.name = name ;
   }
 
