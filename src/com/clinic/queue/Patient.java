@@ -1,7 +1,5 @@
 package com.clinic.queue;
 
-import com.clinic.Billable;
-
 public class Patient extends Person implements Billable{
 
 private String id;
