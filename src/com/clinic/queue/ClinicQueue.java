@@ -9,9 +9,10 @@ public class ClinicQueue{
     public void addPatient(Patient k){
         if  (k.getCondition().equals("Emergency"))
             queue.add(0,k);
-    
-     else
+        
+     else{
          queue.add(k);
+     
 }
 public void viewPatients(){
     if  (queue.size()==0)
@@ -30,5 +31,6 @@ public void servePatient(){
         queue.remove(0);
     }
     else System.out.println("No patients");
+}
 }
 }

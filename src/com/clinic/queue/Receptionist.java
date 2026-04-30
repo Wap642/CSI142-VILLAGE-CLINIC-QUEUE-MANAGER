@@ -19,3 +19,4 @@ public void  registerPatient(String id,String name,int age,String condition,Medi
 
     System.out.println("Patient registired successfully");
 }
+}
