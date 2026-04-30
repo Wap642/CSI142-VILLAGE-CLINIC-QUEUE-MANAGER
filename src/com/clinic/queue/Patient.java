@@ -15,7 +15,6 @@ public Patient(String id, String name, int age, String condition, MedicalVitals 
 public String getId(){
   return id;
 }
-
 public String getCondition(){
   return condition;
 }
@@ -26,14 +25,22 @@ public void setCondition(String condition){
   this.condition = condition;
 }
 public void setVitals(MedicalVitals vitals){
-  this.vitals = vitals ;
-}
-@Override
-public String toString(){
-    return "ID: " + id +", Name: "+ name + ",Age:  "+ age +" ,Condition: " +condition + ",Vitals: "+vitals;
+  this.vitals = vitals;
 }
 @Override
 public int getPriority() {
+  if (condition != null && condition.equalsIgnoreCase("Emergency")){
+    return 1;
+
+  }else if (age > 65) {
+    return 2;
+
+  }else{
     return 3;
+ }
+}
+@Override
+public String toString(){
+  return "ID: " + id +", Name: "+ name + ",Age: "+ age +", Condition: "+ condition + ",Vitals: "+vitals;
  }
 }
