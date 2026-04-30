@@ -7,6 +7,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ClinicQueue clinic = new ClinicQueue();
         Receptionist receptionist = new Receptionist("Alice");
+         System.out.println("Welcome! " + receptionist);
 
         boolean exit = false;
 
@@ -32,8 +33,6 @@ public class Main {
                     sc.nextLine(); 
                     System.out.print("Enter condition (e.g., Emergency, Flu): ");
                     String condition = sc.nextLine();
-
-                    
                     System.out.print("Enter temperature (°C): ");
                     double temperature = sc.nextDouble();
                     sc.nextLine(); 
