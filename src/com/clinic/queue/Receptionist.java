@@ -17,7 +17,7 @@ public void  registerPatient(String id,String name,int age,String condition,Medi
     Patient k =new Patient (id ,name,age ,condition,vitals);
     clinic.addPatient(k);
 
-    System.out.println("Receptionist" + name + "registered patient"+ kname + "(ID: "+ id + ")");
+    System.out.println("Receptionist " + this.name + " registered patient " + name + " (ID: " + id + ")");
 
 }
  @Override

@@ -1,4 +1,4 @@
-package com.clinic.queue;
+1package com.clinic.queue;
 
 import java.util.Scanner;
 
