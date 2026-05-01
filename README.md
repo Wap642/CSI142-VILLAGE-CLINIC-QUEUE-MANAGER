@@ -18,7 +18,7 @@ A Java console application for managing patient queues at a village clinic with 
 - **ClinicQueue**: Manages priority-sorted patient queue
 - **Receptionist**: Handles patient registration
 - **MedicalVitals**: Stores patient health data
-- **QueueEntry**: Data holder that links an individual Patient with their specific queue number to maintain their order within the system 
+- **QueueEntry**: Data holder that links an individual Patient with their specific queueNumber to maintain their order within the system 
 - **Main**: Console menu interface
 
 ## OOP Concepts Used
