@@ -1,4 +1,4 @@
-1package com.clinic.queue;
+package com.clinic.queue;
 
 import java.util.Scanner;
 
@@ -19,8 +19,16 @@ public class Main {
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
 
-            int choice = sc.nextInt();
-            sc.nextLine(); 
+            String input = sc.nextLine();
+            int choice;
+            
+            try {
+                choice = Integer.parseInt(input);
+            } 
+            catch (Exception e) {
+                System.out.println("Invalid input. Please enter a number.");
+                continue;
+            }
             switch (choice) {
                 case 1:
                     
@@ -28,19 +36,43 @@ public class Main {
                     String id = sc.nextLine();
                     System.out.print("Enter patient name: ");
                     String name = sc.nextLine();
+                  
+                    if (name.isEmpty()) {
+                        System.out.println("Name cannot be empty.");
+                        break;
+                    }
                     System.out.print("Enter patient age: ");
-                    int age = sc.nextInt();
-                    sc.nextLine(); 
+                    int age;
+                  
+                    try {
+                        age = Integer.parseInt(sc.nextLine());
+                    } catch (Exception e) {
+                        System.out.println("Invalid age. Please try again.");
+                        break;
+                    } 
                     System.out.print("Enter condition (e.g., Emergency, Flu): ");
                     String condition = sc.nextLine();
                     System.out.print("Enter temperature (°C): ");
-                    double temperature = sc.nextDouble();
-                    sc.nextLine(); 
+                    double temperature;
+                   
+                    try {
+                        temperature = Double.parseDouble(sc.nextLine());
+                    } catch (Exception e) {
+                        System.out.println("Invalid temperature.");
+                        
+                        break;
+                    } 
                     System.out.print("Enter blood pressure (e.g., 120/80): ");
                     String bloodPressure = sc.nextLine();
                     System.out.print("Enter heart rate (bpm): ");
-                    int heartRate = sc.nextInt();
-                    sc.nextLine(); 
+                    int heartRate;
+                    
+                    try {
+                         heartRate = Integer.parseInt(sc.nextLine());
+                        } catch (Exception e) {
+                            System.out.println("Invalid heart rate.");
+                            break;
+                        } 
 
                     
                     MedicalVitals vitals = new MedicalVitals(temperature, bloodPressure, heartRate);
