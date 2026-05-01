@@ -17,6 +17,11 @@ public void  registerPatient(String id,String name,int age,String condition,Medi
     Patient k =new Patient (id ,name,age ,condition,vitals);
     clinic.addPatient(k);
 
-    System.out.println("Patient registired successfully");
+    System.out.println("Receptionist" + name + "registered patient"+ kname + "(ID: "+ id + ")");
+
 }
+ @Override
+ public String toString(){
+  return "Receptionist: "+ name;
+ }
 }
