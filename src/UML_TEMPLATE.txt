@@ -1,0 +1,64 @@
+UML TEMPLATE (text-based)
+
+        Person
+--------------------------------------------------------------------
+- name: String
+- age: int
+--------------------------------------------------------------------
++ Person(name:String, age:int)
+--------------------------------------------------------------------
+        Patient
+--------------------------------------------------------------------
+- id: String
+- condition: String
+- vitals: MedicalVitals
+--------------------------------------------------------------------
++ Patient(id:String, name:String, age:int,
+condition:String, vitals: MedicalVitals) 
++ getId(): String
++ getCondition(): String
++ getVitals(): MedicalVitals
++ setCondition(condition: String):void
++ setVitals(vitals:MedicalVitals):void
++ toString():String
++ getPriority():int
+---------------------------------------------------------------------
+        MedicalVitals
+---------------------------------------------------------------------
+- temperature: double
+- bloodPressure: String
+- heartRate: int
+---------------------------------------------------------------------
++ MedicalVitals(temperature:double, bloodPressure:String,
+heartRate:int)
++ toString():String
+---------------------------------------------------------------------
+        ClinicQueue
+---------------------------------------------------------------------
++ queue:ArrayList<Patient>
++ addPatient(k: Patient):void
++ viewPatient():void
++ servePatient():void
+---------------------------------------------------------------------
+       Receptionist
+---------------------------------------------------------------------
+- name: String
+---------------------------------------------------------------------
++ Receptionist(name:String)
++ getName():String
++ setName(name:String):void
++ registerPatient(id:String, name:String, age:int, condition:String,
+vitals:MedicalVitals, clinic:ClinicQueue):void
+----------------------------------------------------------------------
+       QueueEntry
+----------------------------------------------------------------------
+- patient: Patient
+- queueNumber: int
+----------------------------------------------------------------------
++ QueueEntry(patient:Patient, queueNumber:int)
++ getPatient():Patient
++ getQueueNumber():int
+----------------------------------------------------------------------
+       Prioritizable
+----------------------------------------------------------------------
++ getPriority():int 
