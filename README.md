@@ -18,6 +18,7 @@ A Java console application for managing patient queues at a village clinic with 
 - **ClinicQueue**: Manages priority-sorted patient queue
 - **Receptionist**: Handles patient registration
 - **MedicalVitals**: Stores patient health data
+- **QueueEntry**: Data holder that links an individual Patient with their specific queue number to maintain their order within the system 
 - **Main**: Console menu interface
 
 ## OOP Concepts Used
@@ -34,6 +35,9 @@ The Prioritizable interface defines required behavior (`getPriority()`) without 
 ### Polymorphism
 Objects are used through interface references (e.g., treating Patient objects as Prioritizable), allowing flexible and interchangeable behavior.
 
+### Composition
+The Patient class has-a MedicalVitals object. Similarly, QueueEntry contains a Patient object. This allows you to build complex objects out of simpler, specialized ones.
+
 ## Usage
 
 Compile: `javac com/clinic/queue/*.java`  
@@ -45,4 +49,9 @@ Menu options:
 3. Serve next patient
 4. Exit
 
-
+Team members
+1. Prudence Tebo Thekiso 202300577
+2. Legae Makgolo 202501851
+3. Olerato Dikomang 202404142
+4. Michael Grieves 202504089
+5. Neo Mogote 202501446
