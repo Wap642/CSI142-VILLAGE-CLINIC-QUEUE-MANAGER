@@ -40,8 +40,8 @@ The Patient class has-a MedicalVitals object. Similarly, QueueEntry contains a P
 
 ## Usage
 
-Compile: `javac com/clinic/queue/*.java`  
-Run: `java com.clinic.queue.Main`
+Compile: javac -d out src/com/clinic/queue/*.java   
+Run: java -cp out com.clinic.queue.Main
 
 Menu options:
 1. Register new patient
